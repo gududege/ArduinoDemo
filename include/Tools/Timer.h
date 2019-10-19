@@ -15,14 +15,13 @@ protected:
         ready,
         busy
     } state;
-
+    virtual bool complete();
 public:
     Timer();
     ~Timer();
     unsigned long ET;
     //bu us
-    void start(unsigned long Time);
-    virtual bool complete();
+    void start(unsigned long Time);    
     void reset();
 };
 
